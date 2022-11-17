@@ -1,0 +1,42 @@
+name: Terraform
+
+on: push 
+    
+jobs:
+  terraform:
+    name: Terraform Format and Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.2.6
+      - name: Terraform fmt
+        run: terraform fmt -recursive -check
+      # - name: Terraform init modules
+      #   run: find modules -type d -mindepth 1 -maxdepth 1 | xargs -I {} terraform -chdir={} init -backend=false
+      # - name: Terraform validate modules
+      #   run: find modules -type d -mindepth 1 -maxdepth 1 | xargs -I {} terraform -chdir={} validate
+        
+  # tflint:
+  #   name: Lint
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: actions/cache@v3
+  #     name: Cache plugin dir
+  #     with:
+  #       path: ~/.tflint.d/plugins
+  #       key: ubuntu-tflint-${{ hashFiles('.tflint.hcl') }}
+
+  #   - uses: terraform-linters/setup-tflint@v2
+
+  #   - name: Show TFLint version
+  #     run: tflint --version
+
+  #   - name: Init TFLint
+  #     run: tflint --init
+
+  #   - name: Run TFLint on all modules
+  #     run: find modules -type d -mindepth 1 -maxdepth 1 | xargs -I {} tflint -f compact {}
