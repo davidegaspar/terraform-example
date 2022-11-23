@@ -34,6 +34,8 @@ terraform output -json
 - add terragrunt
 - terraform-docs
   - https://github.com/terraform-docs/terraform-docs
+- gh actions
+  - https://github.com/hashicorp/setup-terraform
 
 ```sh
 terraform-docs markdown table --output-file README.md --output-mode inject modules/storage
