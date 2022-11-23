@@ -7,4 +7,7 @@
 
 ```sh
 brew install tfenv
+tfenv list-remote
+tfenv use 1.3.5
+tfenv pin
 ```
