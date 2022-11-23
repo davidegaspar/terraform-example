@@ -16,14 +16,25 @@ tfenv pin
 
 ```sh
 terraform fmt -recursive -diff -check
-terraform validate # requires init
 ```
 
 ### Environment
 
 ```sh
 terraform init
+terraform validate
 terraform plan -out=plan
 terraform apply plan
 terraform output -json
 ```
+
+## Next steps
+
+- multiple regions
+- add terragrunt
+- terraform-docs
+  - https://github.com/terraform-docs/terraform-docs
+
+## Resources
+
+- https://www.terraform-best-practices.com/
