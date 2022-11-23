@@ -16,4 +16,14 @@ tfenv pin
 
 ```sh
 terraform fmt -recursive -diff -check
+terraform validate # requires init
+```
+
+### Environment
+
+```sh
+terraform init
+terraform plan -out=plan
+terraform apply plan
+terraform output -json
 ```
