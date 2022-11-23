@@ -11,3 +11,9 @@ tfenv list-remote
 tfenv use 1.3.5
 tfenv pin
 ```
+
+## Development
+
+```sh
+terraform fmt -recursive -diff -check
+```
