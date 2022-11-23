@@ -35,6 +35,10 @@ terraform output -json
 - terraform-docs
   - https://github.com/terraform-docs/terraform-docs
 
+```sh
+terraform-docs markdown table --output-file README.md --output-mode inject modules/storage
+```
+
 ## Resources
 
 - https://www.terraform-best-practices.com/
