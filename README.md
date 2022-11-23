@@ -36,6 +36,7 @@ terraform output -json
   - https://github.com/terraform-docs/terraform-docs
 - gh actions
   - https://github.com/hashicorp/setup-terraform
+- https://www.terraform-best-practices.com/faq
 
 ```sh
 terraform-docs markdown table --output-file README.md --output-mode inject modules/storage
