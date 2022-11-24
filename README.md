@@ -1,7 +1,6 @@
-# terraform-poc
+# terraform-example
 
-- iam role
-- pipeline with multiple envs to deploy
+An example implementation of terraform best practices in multi-region infrastructure.
 
 ## Setup
 
