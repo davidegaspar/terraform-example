@@ -29,6 +29,7 @@ terraform output -json
 
 ## Next steps
 
+- new aws accounts
 - multiple regions
 - add terragrunt
 - terraform-docs
