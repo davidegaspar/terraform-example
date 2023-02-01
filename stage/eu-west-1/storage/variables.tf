@@ -1,4 +1,4 @@
-variable "allowed_account_ids" {
+variable "accountId" {
   type = list(string)
 }
 
@@ -7,5 +7,9 @@ variable "region" {
 }
 
 variable "prefix" {
+  type = string
+}
+
+variable "env" {
   type = string
 }

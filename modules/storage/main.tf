@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "storage" {
-  bucket_prefix = var.prefix
+  bucket = format("%s%s", var.prefix, var.env)
 }
 
 resource "aws_s3_bucket_acl" "storage_acl" {
